@@ -2,6 +2,7 @@
 
 public class Tema1Ejercicio5 {
     public static void main(String[] args) {
+
     System.out.println("se van a realizar las siguientes operaciones");
 
     double operacion1 = 24%5;
