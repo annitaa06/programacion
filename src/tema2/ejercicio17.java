@@ -16,7 +16,7 @@ public class ejercicio17 {
         int valorU = sc.nextInt();
 
         //hacer operaciones
-        if (valorU == 0 || valorU == 1 || valorU == 2) {  // Condición corregida
+         // Condición corregida
             switch (valorU) {
                 case 0 -> {
                     System.out.println("Introduce el lado del cuadrado para calcular");
@@ -42,12 +42,11 @@ public class ejercicio17 {
                     superficie = (base * altura) / 2; // Cálculo correcto para superficie de triángulo
                     System.out.println("La superficie del triangulo es " + superficie);
                 }
+                default -> System.out.println("No has escrito un valor valido");
             }
-        } else {
-            System.out.println("No has escrito un valor valido");
+
         }
-        sc.close();
     }
-}
+
 
 
