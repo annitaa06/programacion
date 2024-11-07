@@ -7,6 +7,7 @@ public class ejercicio27 {
         System.out.println("los 20 primeros numeros son:");
         int cont = 0;
         int num = 0;
+
         while (cont < 20) {
             int divi = 0;
             //i empieza siendo 1, mientras i sea menor o igual a la variavle num se suma 1 a i
