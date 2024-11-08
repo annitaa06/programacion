@@ -15,25 +15,20 @@ public class ejercicio29 {
 
         Scanner sc = new Scanner(System.in);
 
-        while (true) {
+        do {
             System.out.print("Introduce un número: ");
             valorU = sc.nextInt();
 
             if (valorU == randomInt) {
                 System.out.println("Has ganado");
-                break;
-
             } else if (valorU < randomInt) {
                 System.out.println("El número es mayor que " + valorU);
-
-            } else if (valorU > randomInt) {
+            } else {
                 System.out.println("El número es menor que " + valorU);
             }
 
             contador++;
-        }
-
+        } while (valorU != randomInt); // El bucle se repite hasta que el usuario acierte
 
     }
 }
-
