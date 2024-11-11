@@ -6,13 +6,14 @@ public class ejercicio24 {
 
     int Aprovados = 0;
     int Suspendidos = 0;
+    boolean entrar =true;
 
     Scanner scanner = new Scanner(System.in);
 
         System.out.println("Introduce las notas, para calcular la cantidad de suspendidos y aprovados introduce un 20");
 
 
-      while (true) {
+      while (entrar=true) {
 
         double valorU = scanner.nextDouble();
 
@@ -20,7 +21,7 @@ public class ejercicio24 {
 
             System.out.println("La cantidad de aprovados es: " + Aprovados + " y la cantidad de suspendidos es: " + Suspendidos);
 
-            break; }
+            entrar=false; }
 
         else if (valorU < 0 || valorU > 10) {
 
