@@ -7,6 +7,7 @@ public class ejer5 {
         Scanner sc= new Scanner(System.in);
         System.out.println( "introduce un numero para mostrar su tabla");
         int numtab = sc.nextInt();
+
     if (numtab >= 1&&  numtab <=10){
         tablaMulti(numtab);
     }
