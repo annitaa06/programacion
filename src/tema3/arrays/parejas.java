@@ -4,7 +4,7 @@ import java.util.*;
 
 public class parejas {
     public static void main(String[] args) {
-        Random random= new Random();
+
 
         String[] animales={
                 "Perro","Perro", "Gato", "Gato",
