@@ -3,7 +3,7 @@ package tema3.arrays;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class EJER1 {
+public class MyArray {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
