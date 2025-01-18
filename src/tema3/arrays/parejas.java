@@ -72,6 +72,7 @@ public class parejas {
     }
 
     //funcion para mostrar el tablero recorre todo el array y si es visible muestra el animal si no muestra
+
     public static void mostrarTablero(String [] animales, boolean[] visibles){
         for (int i=0; i< animales.length; i++){
             if (visibles[i]) System.out.print(animales[i]+" ");

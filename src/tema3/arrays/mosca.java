@@ -5,42 +5,53 @@ import java.util.Scanner;
 public class mosca {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int posicionMosca=generarPosicion(); //generar poicion mosca
-        int eleccionJugador = 0;
+        int[] tablero = new int[15];
+        int posicionMosca = generarPosicion(tablero);
+        int eleccionJugador;
 
         System.out.println("¡Bienvenido! Intenta encontrar a la mosca.");
 
-        while (eleccionJugador != posicionMosca) { //sigue preguntanfo hasta que wl numero del usuario sea correcto
-            eleccionJugador= pedirPosicion(sc);
+        do {
+            imprimirTablero(tablero);
+            eleccionJugador = pedirPosicion(sc);
 
-
-            if (correcto (eleccionJugador, posicionMosca)) {
-                System.out.println("Has encontrado la mosca!!");
+            if (esCorrecto(eleccionJugador, posicionMosca)) {
+                System.out.println("¡Has encontrado la mosca!");
+            } else if (esAdyacente(eleccionJugador, posicionMosca)) {
+                System.out.println("Estuviste cerca, la mosca se ha movido.");
+                posicionMosca = generarPosicion(tablero);
+            } else {
+                System.out.println("Fallaste.");
             }
-            else if (adyacente(eleccionJugador, posicionMosca)){
-                System.out.println("Has estado cerca y has asustado a la mosca asi que se ha movido de posicion");
-                posicionMosca = generarPosicion(); // Nueva posición
+        } while (!esCorrecto(eleccionJugador, posicionMosca));
+    }
 
-            }else {
-                System.out.println("Has fallado, la mosca se mantiene en su lugar, no la has asustado.");
-
-            }
+    public static int generarPosicion(int[] tablero) {
+        for (int i = 0; i < tablero.length; i++) {
+            tablero[i] = 0;
         }
-
-
+        int posicion = (int) (Math.random() * tablero.length);
+        tablero[posicion] = 1;
+        return posicion;
     }
-    public static int generarPosicion(){
-        return (int) (Math.random()*15+1);
-    }
-    public static int pedirPosicion (Scanner sc){
+
+    public static int pedirPosicion(Scanner sc) {
         System.out.print("Elige una posición (1 a 15): ");
-        return sc.nextInt();
+        return sc.nextInt() - 1;
+    }
 
+    public static boolean esCorrecto(int eleccionJugador, int posicionMosca) {
+        return eleccionJugador == posicionMosca;
     }
-    public static boolean correcto (int posJugador, int posMosca){
-        return posJugador==posMosca;
+
+    public static boolean esAdyacente(int eleccionJugador, int posicionMosca) {
+        return Math.abs(eleccionJugador - posicionMosca) == 1;
     }
-    public static boolean adyacente (int posJugador, int posMosca){
-        return Math.abs(posJugador - posMosca)==1;
+
+    public static void imprimirTablero(int[] tablero) {
+        for (int i = 0; i < tablero.length; i++) {
+            System.out.print("[ ] "); // Oculta la posición de la mosca
+        }
+        System.out.println();
     }
 }
