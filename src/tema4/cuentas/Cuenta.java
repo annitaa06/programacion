@@ -1,4 +1,4 @@
-package tema4.cuentas;
+package cuentas;
 
 public class Cuenta {
     private String numCuenta; // Número de cuenta
@@ -33,4 +33,3 @@ public class Cuenta {
         return false; // Saldo insuficiente, pago no realizado
     }
 }
-

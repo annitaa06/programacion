@@ -1,4 +1,4 @@
-package tema4.cuentas;
+package cuentas;
 
 public class PersonaC {
     private String dni;
