@@ -6,6 +6,8 @@ public class MainCuenta {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         PersonaC persona = null; //almacenamos la persona aqui
+        PersonaC arrayPersonas[] = new PersonaC[10];
+        int contadArray=0;
         int opcion;
         do {
             System.out.println("--MENU--");
@@ -25,6 +27,8 @@ public class MainCuenta {
                     String dni = sc.nextLine();
                     String basura =sc.nextLine();
                     persona = new PersonaC(dni);
+                    arrayPersonas[contadArray]=persona;
+                    contadArray++;
                     System.out.println("persona creada con exito");
                 }
                 case 2: {
