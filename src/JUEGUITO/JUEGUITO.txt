@@ -1,0 +1,2 @@
+Título: aaa, Plataforma: aaa, Nota: 5, Tipo: Físico, Tienda: aaa, Estado: nuevo
+Título: a, Plataforma: a, Nota: 2, Tipo: Físico, Tienda: a, Estado: nuevo
